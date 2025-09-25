@@ -4,12 +4,12 @@
 using namespace std;
 #define LL long long
 
-int h;
-double arr[1000000009+1];
+LL h;
+double arr[10005];
 int n;
 
 bool steals(double x) {
-    int hours = 0;
+    LL hours = 0;
     for(int i = 0; i<n; i++) {
         hours += ceil(arr[i]/x);
 
@@ -25,9 +25,7 @@ bool steals(double x) {
 
 int main() {
    
-    double x;
-    int max_speed = 0;
-    double min_speed;
+    double x, max_speed = 0, min_speed;
     cin >> n >> h;
 
     for(int i = 0; i<n; i++) {
@@ -36,7 +34,7 @@ int main() {
         arr[i] = x;
     }
 
-     int l = 0, r = max_speed, mid;
+    LL l = 0, r = max_speed, mid;
 
     while(l <= r) {
         mid = (l+r)/2;
