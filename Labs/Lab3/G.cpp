@@ -3,7 +3,6 @@
 #define LL long long
 using namespace std;
 
-
 LL h;
 double arr[100005];
 double n;
@@ -16,7 +15,6 @@ bool steals(double x) {
         if(hours > h) {
             return false;
         }
-
     }
 
     return true;
