@@ -6,13 +6,14 @@ using namespace std;
 const int N = 1e5+2;
 int main(){
 
-ll n,k,min = INT_MAX;
+ll n,k;
+cin >> n >> k;
 ll a[N];
 ll pref[N];
 
 for(int i = 0;i < n;i++){
     cin >> a[i];
-    pref[i] = pref[i-1] + a[i];
+    pref[i+1] = pref[i] + a[i];
 }
     int l = 1;
     int r = n;
